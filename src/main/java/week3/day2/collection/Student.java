@@ -10,4 +10,16 @@ public class Student {
         this.name = name;
         this.gitRepositoryAddress = gitRepositoryAddress;
     }
+
+    public int getClassNo() {
+        return classNo;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getGitRepositoryAddress() {
+        return gitRepositoryAddress;
+    }
 }
