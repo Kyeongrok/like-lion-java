@@ -1,5 +1,7 @@
 package week3.day4;
 
+import com.likelion.domain.PopulationMove;
+
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;

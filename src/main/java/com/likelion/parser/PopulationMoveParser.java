@@ -1,7 +1,7 @@
-package com.likelion.context;
+package com.likelion.parser;
 
 import com.likelion.context.Parser;
-import week3.day4.PopulationMove;
+import com.likelion.domain.PopulationMove;
 
 public class PopulationMoveParser implements Parser<PopulationMove> {
     @Override

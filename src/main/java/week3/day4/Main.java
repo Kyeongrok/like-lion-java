@@ -1,7 +1,8 @@
 package week3.day4;
 
-import com.likelion.context.PopulationMoveParser;
+import com.likelion.parser.PopulationMoveParser;
 import com.likelion.context.ReadLineContext;
+import com.likelion.domain.PopulationMove;
 
 import java.io.IOException;
 import java.util.List;

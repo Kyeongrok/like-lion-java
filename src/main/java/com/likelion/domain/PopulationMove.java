@@ -1,4 +1,4 @@
-package week3.day4;
+package com.likelion.domain;
 
 import java.util.HashMap;
 import java.util.Map;
