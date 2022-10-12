@@ -1,6 +1,8 @@
 package week4.algorithm;
 
-public class Max05 {
+import java.util.Arrays;
+
+public class MaxInMatrix {
 
     // arr을 받아서 최대값을 구해서 int로 리턴함
     /*
@@ -32,12 +34,19 @@ public class Max05 {
         };
         // loop를 돌아야 합니다. 9 * 9
         int maxValue = arr[0][0];
-        for (int i = 0; i < 1; i++) {
+        int[] maxIdx = {0, 0}; // i, j
+        for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 //
-                int a = arr[j][i]; // 1 j가 먼저 바뀐다
+                if (arr[i][j] > maxValue) {
+                    maxValue = arr[i][j];
+                    maxIdx[0] = i;
+                    maxIdx[1] = j;
+                }
             }
         }
+        System.out.println(maxValue);
+        System.out.println(Arrays.toString(maxIdx));
 
     }
 }
