@@ -1,6 +1,6 @@
 package week2;
 
-public class HelloStar {
+public class StarRightTriangle {
     /*
 
     *               0 1

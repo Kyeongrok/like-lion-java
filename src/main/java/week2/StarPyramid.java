@@ -1,6 +1,6 @@
 package week2;
 
-public class PrintStar {
+public class StarPyramid {
     /*
     0 1 2 3
     000*000  --> 3-0개만큼 0을 출력 별1개 시작은 3번부터
@@ -25,7 +25,7 @@ public class PrintStar {
         int N = 3;
         for (int i = 0; i <= N; i++) {
             for (int j = 0; j <= N - i; j++) {
-                System.out.printf("0");
+                System.out.printf(" ");
             }
             for (int k = 0; k < 2 * i + 1; k++) {
                 System.out.printf("*");
@@ -46,6 +46,8 @@ public class PrintStar {
         }
     }
     public static void main(String[] args) {
+        StarPyramid ps = new StarPyramid();
+        ps.answer2();
 
     }
 }
