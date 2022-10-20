@@ -14,13 +14,24 @@ public class SolveBracket {
         s = String.join("", arr);
         return s.length() == 0;
     }
+
+    private boolean isPair(String open, String close) {
+        if (open.equals("(") && close.equals(")")) {
+            return true;
+        }else if (open.equals("{") && close.equals("}")) {
+            return true;
+        }else if (open.equals("[") && close.equals("]")) {
+            return true;
+        }
+        return false;
+    }
     public boolean solveBracketStack(String s) {
         Stack<String> st = new Stack<>();
 
         for (int i = 0; i < s.length(); i++) {
-            if(s.charAt(i) == '('){
+            if(s.charAt(i) == '(' || s.charAt(i) == '{' || s.charAt(i) == '['){
                 st.push(String.valueOf(s.charAt(i)));
-            } else if (s.charAt(i) == ')') {
+            } else if (isPair(st.peek(), String.valueOf(s.charAt(i)))) {
                 if (st.empty()) return false;
                 st.pop();
             }
@@ -29,7 +40,7 @@ public class SolveBracket {
     }
     public static void main(String[] args) {
         String s = "((((((((((((((((((((((((((((((((((((((((((((((((()))))))))))))))))))))))))))))))))))))))))))))))))))))";
-        s = "(".repeat(5_000_000) + ")".repeat(5_000_001);
+        s = "(".repeat(5_000_000) + ")".repeat(5_000_000);
         SolveBracket sb = new SolveBracket();
 //        System.out.println(sb.solveBracketReplace(s));
         System.out.println(sb.solveBracketStack(s));
